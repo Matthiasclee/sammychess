@@ -1,0 +1,248 @@
+<html>
+  <head>
+    <title>Sammy Chess</title>
+    <style>
+      td {
+        width: 60px;
+        border: 1px solid black;
+        background: lightblue;
+      }
+      tr {
+        height: 60px;
+      }
+      b {
+        font-size: 40px;
+        text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td class="square" id="r1c1" onclick="squareClicked('r1c1')">
+        </td>
+        <td class="square" id="r1c2" onclick="squareClicked('r1c2')">
+        </td>
+        <td class="square" id="r1c3" onclick="squareClicked('r1c3')">
+        </td>
+        <td class="square" id="r1c4" onclick="squareClicked('r1c4')">
+        </td>
+        <td class="square" id="r1c5" onclick="squareClicked('r1c5')">
+        </td>
+        <td class="square" id="r1c6" onclick="squareClicked('r1c6')">
+        </td>
+        <td class="square" id="r1c7" onclick="squareClicked('r1c7')">
+        </td>
+        <td class="square" id="r1c8" onclick="squareClicked('r1c8')">
+        </td>
+        <td class="square" id="r1c9" onclick="squareClicked('r1c9')">
+        </td>
+        <td class="square" id="r1c10" onclick="squareClicked('r1c10')">
+        </td>
+      </tr>
+      <tr>
+        <td class="square" id="r2c1" onclick="squareClicked('r2c1')">
+        </td>
+        <td class="square" id="r2c2" onclick="squareClicked('r2c2')">
+        </td>
+        <td class="square" id="r2c3" onclick="squareClicked('r2c3')">
+        </td>
+        <td class="square" id="r2c4" onclick="squareClicked('r2c4')">
+        </td>
+        <td class="square" id="r2c5" onclick="squareClicked('r2c5')">
+        </td>
+        <td class="square" id="r2c6" onclick="squareClicked('r2c6')">
+        </td>
+        <td class="square" id="r2c7" onclick="squareClicked('r2c7')">
+        </td>
+        <td class="square" id="r2c8" onclick="squareClicked('r2c8')">
+        </td>
+        <td class="square" id="r2c9" onclick="squareClicked('r2c9')">
+        </td>
+        <td class="square" id="r2c10" onclick="squareClicked('r2c10')">
+        </td>
+      </tr>
+      <tr>
+        <td class="square" id="r3c1" onclick="squareClicked('r3c1')">
+        </td>
+        <td class="square" id="r3c2" onclick="squareClicked('r3c2')">
+        </td>
+        <td class="square" id="r3c3" onclick="squareClicked('r3c3')">
+        </td>
+        <td class="square" id="r3c4" onclick="squareClicked('r3c4')">
+        </td>
+        <td class="square" id="r3c5" onclick="squareClicked('r3c5')">
+        </td>
+        <td class="square" id="r3c6" onclick="squareClicked('r3c6')">
+        </td>
+        <td class="square" id="r3c7" onclick="squareClicked('r3c7')">
+        </td>
+        <td class="square" id="r3c8" onclick="squareClicked('r3c8')">
+        </td>
+        <td class="square" id="r3c9" onclick="squareClicked('r3c9')">
+        </td>
+        <td class="square" id="r3c10" onclick="squareClicked('r3c10')">
+        </td>
+      </tr>
+      <tr>
+        <td class="square" id="r4c1" onclick="squareClicked('r4c1')">
+        </td>
+        <td class="square" id="r4c2" onclick="squareClicked('r4c2')">
+        </td>
+        <td class="square" id="r4c3" onclick="squareClicked('r4c3')">
+        </td>
+        <td class="square" id="r4c4" onclick="squareClicked('r4c4')">
+        </td>
+        <td class="square" id="r4c5" onclick="squareClicked('r4c5')">
+        </td>
+        <td class="square" id="r4c6" onclick="squareClicked('r4c6')">
+        </td>
+        <td class="square" id="r4c7" onclick="squareClicked('r4c7')">
+        </td>
+        <td class="square" id="r4c8" onclick="squareClicked('r4c8')">
+        </td>
+        <td class="square" id="r4c9" onclick="squareClicked('r4c9')">
+        </td>
+        <td class="square" id="r4c10" onclick="squareClicked('r4c10')">
+        </td>
+      </tr>
+      <tr>
+        <td class="square" id="r5c1" onclick="squareClicked('r5c1')">
+        </td>
+        <td class="square" id="r5c2" onclick="squareClicked('r5c2')">
+        </td>
+        <td class="square" id="r5c3" onclick="squareClicked('r5c3')">
+        </td>
+        <td class="square" id="r5c4" onclick="squareClicked('r5c4')">
+        </td>
+        <td class="square" id="r5c5" onclick="squareClicked('r5c5')">
+        </td>
+        <td class="square" id="r5c6" onclick="squareClicked('r5c6')">
+        </td>
+        <td class="square" id="r5c7" onclick="squareClicked('r5c7')">
+        </td>
+        <td class="square" id="r5c8" onclick="squareClicked('r5c8')">
+        </td>
+        <td class="square" id="r5c9" onclick="squareClicked('r5c9')">
+        </td>
+        <td class="square" id="r5c10" onclick="squareClicked('r5c10')">
+        </td>
+      </tr>
+      <tr>
+        <td class="square" id="r6c1" onclick="squareClicked('r6c1')">
+        </td>
+        <td class="square" id="r6c2" onclick="squareClicked('r6c2')">
+        </td>
+        <td class="square" id="r6c3" onclick="squareClicked('r6c3')">
+        </td>
+        <td class="square" id="r6c4" onclick="squareClicked('r6c4')">
+        </td>
+        <td class="square" id="r6c5" onclick="squareClicked('r6c5')">
+        </td>
+        <td class="square" id="r6c6" onclick="squareClicked('r6c6')">
+        </td>
+        <td class="square" id="r6c7" onclick="squareClicked('r6c7')">
+        </td>
+        <td class="square" id="r6c8" onclick="squareClicked('r6c8')">
+        </td>
+        <td class="square" id="r6c9" onclick="squareClicked('r6c9')">
+        </td>
+        <td class="square" id="r6c10" onclick="squareClicked('r6c10')">
+        </td>
+      </tr>
+      <tr>
+        <td class="square" id="r7c1" onclick="squareClicked('r7c1')">
+        </td>
+        <td class="square" id="r7c2" onclick="squareClicked('r7c2')">
+        </td>
+        <td class="square" id="r7c3" onclick="squareClicked('r7c3')">
+        </td>
+        <td class="square" id="r7c4" onclick="squareClicked('r7c4')">
+        </td>
+        <td class="square" id="r7c5" onclick="squareClicked('r7c5')">
+        </td>
+        <td class="square" id="r7c6" onclick="squareClicked('r7c6')">
+        </td>
+        <td class="square" id="r7c7" onclick="squareClicked('r7c7')">
+        </td>
+        <td class="square" id="r7c8" onclick="squareClicked('r7c8')">
+        </td>
+        <td class="square" id="r7c9" onclick="squareClicked('r7c9')">
+        </td>
+        <td class="square" id="r7c10" onclick="squareClicked('r7c10')">
+        </td>
+      </tr>
+      <tr>
+        <td class="square" id="r8c1" onclick="squareClicked('r8c1')">
+        </td>
+        <td class="square" id="r8c2" onclick="squareClicked('r8c2')">
+        </td>
+        <td class="square" id="r8c3" onclick="squareClicked('r8c3')">
+        </td>
+        <td class="square" id="r8c4" onclick="squareClicked('r8c4')">
+        </td>
+        <td class="square" id="r8c5" onclick="squareClicked('r8c5')">
+        </td>
+        <td class="square" id="r8c6" onclick="squareClicked('r8c6')">
+        </td>
+        <td class="square" id="r8c7" onclick="squareClicked('r8c7')">
+        </td>
+        <td class="square" id="r8c8" onclick="squareClicked('r8c8')">
+        </td>
+        <td class="square" id="r8c9" onclick="squareClicked('r8c9')">
+        </td>
+        <td class="square" id="r8c10" onclick="squareClicked('r8c10')">
+        </td>
+      </tr>
+      <tr>
+        <td class="square" id="r9c1" onclick="squareClicked('r9c1')">
+        </td>
+        <td class="square" id="r9c2" onclick="squareClicked('r9c2')">
+        </td>
+        <td class="square" id="r9c3" onclick="squareClicked('r9c3')">
+        </td>
+        <td class="square" id="r9c4" onclick="squareClicked('r9c4')">
+        </td>
+        <td class="square" id="r9c5" onclick="squareClicked('r9c5')">
+        </td>
+        <td class="square" id="r9c6" onclick="squareClicked('r9c6')">
+        </td>
+        <td class="square" id="r9c7" onclick="squareClicked('r9c7')">
+        </td>
+        <td class="square" id="r9c8" onclick="squareClicked('r9c8')">
+        </td>
+        <td class="square" id="r9c9" onclick="squareClicked('r9c9')">
+        </td>
+        <td class="square" id="r9c10" onclick="squareClicked('r9c10')">
+        </td>
+      </tr>
+      <tr>
+        <td class="square" id="r10c1" onclick="squareClicked('r10c1')">
+        </td>
+        <td class="square" id="r10c2" onclick="squareClicked('r10c2')">
+        </td>
+        <td class="square" id="r10c3" onclick="squareClicked('r10c3')">
+        </td>
+        <td class="square" id="r10c4" onclick="squareClicked('r10c4')">
+        </td>
+        <td class="square" id="r10c5" onclick="squareClicked('r10c5')">
+        </td>
+        <td class="square" id="r10c6" onclick="squareClicked('r10c6')">
+        </td>
+        <td class="square" id="r10c7" onclick="squareClicked('r10c7')">
+        </td>
+        <td class="square" id="r10c8" onclick="squareClicked('r10c8')">
+        </td>
+        <td class="square" id="r10c9" onclick="squareClicked('r10c9')">
+        </td>
+        <td class="square" id="r10c10" onclick="squareClicked('r10c10')">
+        </td>
+      </tr>
+    </table>
+    <button id="gun" onclick="usegun()" style="display:none;">Use Gun</button>
+    <p id="gunuse" style="display:none;">
+      This piece can use a gun. To use the gun, click on "Use Gun". Now, when you<br>click a piece, it gets captured and this piece doesn't move.
+    </p>
+    <script src="main.js"></script>
+  </body>
+</html>
