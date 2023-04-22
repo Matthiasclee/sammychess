@@ -12,7 +12,11 @@ let white_horses_disabled = false
 function get_element(c_id) {
   c = characters[c_id]["color"]
   l = characters[c_id]["type"][0]
-  return `<b style="color: ${c}">${l}</b>`
+  g = ""
+  if (characters[c_id]["has_gun"]){
+    g = "*"
+  }
+  return `<b style="color: ${c}">${l}${g}</b>`
 }
 
 function new_character(c, loc, color) {
@@ -21,7 +25,11 @@ function new_character(c, loc, color) {
   }
 
   c_id = Math.random().toString()
-  characters[c_id] = {"type": c, "loc": loc, "color": color}
+  has_gun = false
+  if (c == "horse"){
+    has_gun = true
+  }
+  characters[c_id] = {"type": c, "loc": loc, "color": color, "has_gun": has_gun}
   board_positions[loc] = c_id
 
   c_e =document.getElementById(loc) 
@@ -69,6 +77,8 @@ function squareClicked(loc){
       gun_activated = false
       hidegun()
       document.getElementById(selectedsquare).style.background = "lightblue"
+      characters[board_positions[selectedsquare]]["has_gun"] = false
+      document.getElementById(selectedsquare).innerHTML = get_element(board_positions[selectedsquare])
       squareselected = false
       selectedsquare = ""
       next_turn()
@@ -164,7 +174,7 @@ function squareClicked(loc){
     squareselected = true
     selectedsquare = loc
 
-    if (characters[board_positions[loc]]["type"] == "horse"){showgun()}
+    if (characters[board_positions[loc]]["has_gun"]){showgun()}
   }
 }
 
