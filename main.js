@@ -182,6 +182,10 @@ function usegun(){
   if (!squareselected) {
     return
   }
+  if (gun_activated){
+    gun_activated = false
+    return
+  }
   gun_activated = true
 }
 function showgun(){
