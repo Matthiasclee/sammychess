@@ -1,4 +1,4 @@
-// The code is just as goofy as the game :)
+// A straw has ONE hole
 
 let characters = {}
 let board_positions = {}
@@ -45,9 +45,11 @@ function move_character(c_id, loc) {
     console.log("empty space")
   } else if (c["color"] == characters[nl]["color"]){
     alert("Cannot capture own piece")
+    next_turn()
     return("Cannot capture own piece")
-  } else if ((c["type"] == "horse") && ((characters[board_positions[loc]]["type"] == "horse") || (characters[board_positions[loc]]["type"] == "king"))){
-    alert("Horse cannot kill kings and other horses")
+  } else if ((c["type"] == "horse") && ((characters[board_positions[loc]]["type"] == "king"))){
+    alert("Horses cannot capture kings")
+    next_turn()
     return
   }
 
@@ -69,7 +71,7 @@ function squareClicked(loc){
         return
       }
       if ((characters[board_positions[loc]]["type"] == "horse") || (characters[board_positions[loc]]["type"] == "king")){
-        alert("Horse cannot kill kings and other horses")
+        alert("Horse cannot shoot kings and other horses")
         return
       }
       document.getElementById(loc).innerHTML=""
@@ -184,17 +186,21 @@ function usegun(){
   }
   if (gun_activated){
     gun_activated = false
+    document.getElementById("gun").innerHTML = "Activate Gun"
     return
   }
   gun_activated = true
+  document.getElementById("gun").innerHTML = "Deactivate Gun"
 }
 function showgun(){
   document.getElementById("gun").style.display="block"
   document.getElementById("gunuse").style.display="block"
+  document.getElementById("gun").innerHTML = "Activate Gun"
 }
 function hidegun(){
   document.getElementById("gun").style.display="none"
   document.getElementById("gunuse").style.display="none"
+  document.getElementById("gun").innerHTML = "Activate Gun"
 }
 function next_turn(){
   if (turn == "white"){
@@ -202,6 +208,7 @@ function next_turn(){
   } else {
     turn = "white"
   }
+  document.getElementById("turn").innerHTML=`${turn}'s turn`
 }
 
 

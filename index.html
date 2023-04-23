@@ -17,7 +17,9 @@
     </style>
   </head>
   <body>
-    <h3>Sammy Chess</h3>
+    <h3 style="margin-bottom:0">Sammy Chess</h3>
+    <a style="marin-top:0" href="how_to_play">How to play</a>
+    <h4 id="turn">white's turn</h4>
     <table>
       <tr>
         <td class="square" id="r1c1" onclick="squareClicked('r1c1')">
@@ -240,9 +242,9 @@
         </td>
       </tr>
     </table>
-    <button id="gun" onclick="usegun()" style="display:none;">Use Gun</button>
+    <button id="gun" onclick="usegun()" style="display:none;">Activate Gun</button>
     <p id="gunuse" style="display:none;">
-      This piece can use a gun. To use the gun, click on "Use Gun". Now, when you<br>click a piece, it gets captured and this piece doesn't move.
+      This piece can use a gun. To use the gun, click on "Activate Gun". Now, when you<br>click a piece, it gets captured and this piece doesn't move.
     </p>
     <script src="main.js"></script>
   </body>
