@@ -44,7 +44,6 @@ function move_character(c_id, loc) {
   if (!nl) {
     console.log("empty space")
   } else if (c["color"] == characters[nl]["color"]){
-    alert("Cannot capture own piece")
     next_turn()
     return("Cannot capture own piece")
   } else if ((c["type"] == "horse") && ((characters[board_positions[loc]]["type"] == "king"))){
