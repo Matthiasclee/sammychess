@@ -70,11 +70,24 @@ function squareClicked(loc){
         return
       }
       if ((characters[board_positions[loc]]["type"] == "horse") || (characters[board_positions[loc]]["type"] == "king")){
-        alert("Horse cannot shoot kings and other horses")
+        alert("You cannot shoot kings and other horses")
         return
       }
+      c = characters[board_positions[loc]]
+
       document.getElementById(loc).innerHTML=""
-      board_positions[loc] = undefined
+
+      if (c["color"] == turn && c["type"] == "bishop"){
+        board_positions[loc] = undefined
+        new_character("king", loc, turn)
+        characters[board_positions[loc]]["has_gun"] = (Math.round(Math.random()-0.3) == 1)
+        c_id = board_positions[loc]
+        c_e =document.getElementById(loc) 
+        c_e.innerHTML = get_element(c_id)
+      } else {
+        board_positions[loc] = undefined
+      }
+
       gun_activated = false
       hidegun()
       document.getElementById(selectedsquare).style.background = "lightblue"
@@ -82,6 +95,7 @@ function squareClicked(loc){
       document.getElementById(selectedsquare).innerHTML = get_element(board_positions[selectedsquare])
       squareselected = false
       selectedsquare = ""
+
       next_turn()
       return
     }

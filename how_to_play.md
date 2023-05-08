@@ -1,3 +1,6 @@
+# Sammy Chess rules
+
+
 ## Pieces
 
 * Horse (`h`)
@@ -19,15 +22,16 @@ Horses and queens can move anywhere on the board.
 
 ## Capturing
 Any piece can capture any other piece of the opposing color by moving onto its square,
-with the exception on horses. Horses can capture anything, except kings.
+with the exception of horses. Horses can capture anything, except kings.
 
 ## Special abilities
 #### Pawns
 Like in normal chess, pawns can promote when they reach the other end of the board.
-Unlike normal chess, however, they can promote to kings
+Unlike normal chess, however, they can also promote to kings.
 #### Horses
 Horses have a single use gun. Any horse with a gun is indicated by a `*` next to it
 on the board. To use the gun, click the horse, and then click on "Activate Gun". Now,
 any character you click on the board, including your own color will be captured. This
-does not work on kings or other horses.
+does not work on kings or other horses. Additionally, when a horse shoots a bishop of
+its own color, the bishop becomes a king, and has a 20% chance of spawning with a gun.
 #### There is one more secret ability.
