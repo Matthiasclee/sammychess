@@ -206,7 +206,7 @@ function usegun(){
   document.getElementById("gun").innerHTML = "Deactivate Gun"
 }
 function showgun(){
-  document.getElementById("gun").style.display="block"
+  document.getElementById("gun").style.display="inline"
   document.getElementById("gunuse").style.display="block"
   document.getElementById("gun").innerHTML = "Activate Gun"
 }
